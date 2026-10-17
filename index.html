@@ -1,137 +1,199 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="utf-8">
+  <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#111111">
-  <meta name="description" content="BAE fabrica mesadas de porcelanato líquido sobre MDF a medida. Consultá por WhatsApp y pedí tu presupuesto.">
-  <title>BAE | Mesadas a medida</title>
+  <meta name="theme-color" content="#11110f">
+  <meta name="description" content="BAE Mesadas: mesadas y vanitorios con terminación de porcelanato líquido sobre MDF. Consultá por medidas, opciones e instalación.">
+  <title>BAE Mesadas | Diseño que transforma tu espacio</title>
   <style>
-    :root{--black:#111;--white:#f7f6f2;--wood:#b7895b;--muted:#bdbab3}
+    :root{--bg:#11110f;--panel:#1b1b18;--cream:#f5f1e8;--muted:#bcb8ad;--wood:#b58b61;--line:rgba(245,241,232,.15);--max:1160px}
     *{box-sizing:border-box}
-    html{scroll-behavior:smooth}
-    body{margin:0;background:var(--black);color:var(--white);font-family:Arial,Helvetica,sans-serif;line-height:1.55}
+    html{scroll-behavior:smooth;scroll-padding-top:82px}
+    body{margin:0;background:var(--bg);color:var(--cream);font-family:Arial,Helvetica,sans-serif;line-height:1.6}
     a{color:inherit}
-    .wrap{width:min(1120px,92%);margin:auto}
-    header{position:sticky;top:0;z-index:5;background:rgba(17,17,17,.94);backdrop-filter:blur(10px);border-bottom:1px solid #333}
-    nav{display:flex;align-items:center;justify-content:space-between;padding:16px 0;gap:20px}
-    .logo{font-size:1.7rem;font-weight:900;letter-spacing:.18em}.logo span{color:var(--wood)}
-    .navlinks{display:flex;gap:22px;flex-wrap:wrap}.navlinks a{text-decoration:none;color:#ddd;font-size:.92rem}
-    .hero{min-height:580px;display:grid;align-items:center;background:linear-gradient(90deg,rgba(0,0,0,.88),rgba(0,0,0,.52)),linear-gradient(135deg,#252525 0%,#111 45%,#644a34 100%);border-bottom:1px solid #333}
-    .hero-inner{padding:82px 0;max-width:760px}
-    .eyebrow{color:#d6b18b;text-transform:uppercase;letter-spacing:.2em;font-size:.78rem;font-weight:bold}
-    h1{font-size:clamp(2.5rem,7vw,5.4rem);line-height:1.02;margin:18px 0}
-    h1 em{font-style:normal;color:#d4ad82}
-    .hero p{font-size:1.12rem;color:#ddd;max-width:600px}
-    .actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px}
-    .btn{display:inline-flex;align-items:center;justify-content:center;text-decoration:none;border-radius:5px;padding:13px 20px;font-weight:800;border:1px solid var(--wood)}
-    .btn.primary{background:var(--wood);color:#111}.btn.secondary{color:#fff;background:transparent}
-    section{padding:76px 0}
-    .section-head{max-width:680px;margin-bottom:32px}
-    h2{font-size:clamp(1.8rem,4vw,3rem);line-height:1.1;margin:8px 0 14px}
-    .intro{color:#c8c5bf}
-    .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
-    .card{background:#1b1b1b;border:1px solid #343434;border-radius:8px;overflow:hidden}
-    .visual{height:190px;background:linear-gradient(135deg,#ddd 0%,#f8f7f3 35%,#aaa 36%,#ecebe6 60%,#5d4632 61%,#2b2018 100%);position:relative}
-    .visual::after{content:"";position:absolute;inset:0;background:linear-gradient(130deg,transparent 35%,rgba(255,255,255,.35) 36%,transparent 39%,transparent 65%,rgba(0,0,0,.18) 66%)}
-    .visual.dark{background:linear-gradient(135deg,#080808,#393939 45%,#141414 60%,#75583c)}
-    .visual.wood{background:linear-gradient(135deg,#3a2618,#b98a5b 25%,#68452b 50%,#c69a68 72%,#2d2118)}
-    .card-body{padding:20px}.card h3{margin:0 0 8px}.card p{margin:0;color:#c8c5bf;font-size:.96rem}
-    .steps{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
-    .step{border-top:2px solid var(--wood);padding-top:18px}.number{font-size:2rem;color:var(--wood);font-weight:900}
-    .band{background:#f0eee8;color:#171717}.band .intro{color:#444}
-    .band-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:35px;align-items:center}
-    .checklist{padding:0;list-style:none}.checklist li{padding:10px 0;border-bottom:1px solid #d4d0c8}
-    .checklist li::before{content:"✓";font-weight:bold;color:#8b623e;margin-right:12px}
-    .contactbox{background:#1b1b1b;border:1px solid #3b3b3b;border-radius:8px;padding:26px}
-    label{display:block;margin:12px 0 6px;font-size:.9rem;color:#ddd}
-    input,select,textarea{width:100%;padding:12px;border-radius:4px;border:1px solid #555;background:#111;color:#fff;font:inherit}
-    textarea{min-height:95px;resize:vertical}
-    .contactbox .btn{width:100%;margin-top:16px;cursor:pointer;font-size:1rem}
-    .small{font-size:.82rem;color:#aaa}
-    footer{padding:28px 0;border-top:1px solid #333;color:#aaa;font-size:.88rem}
-    .wa-float{position:fixed;right:18px;bottom:18px;z-index:10;background:#2eae61;color:#07190d;border-radius:30px;padding:13px 17px;font-weight:bold;text-decoration:none;box-shadow:0 5px 20px #0008}
-    @media(max-width:760px){.navlinks{display:none}.hero{min-height:500px}.cards,.steps,.band-grid{grid-template-columns:1fr}.visual{height:165px}section{padding:55px 0}}
+    img{max-width:100%;display:block}
+    .wrap{width:min(var(--max),calc(100% - 40px));margin:auto}
+    .topbar{position:sticky;top:0;z-index:20;background:rgba(17,17,15,.94);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+    .nav{min-height:72px;display:flex;align-items:center;justify-content:space-between;gap:18px}
+    .brand{display:flex;align-items:center;gap:11px;text-decoration:none;font-weight:900;letter-spacing:.14em}
+    .brand-mark{display:grid;place-items:center;width:39px;height:39px;border:1px solid var(--wood);color:var(--wood);font-size:19px}
+    .brand small{display:block;font-size:10px;font-weight:500;letter-spacing:.23em;color:var(--muted)}
+    .navlinks{display:flex;align-items:center;gap:22px}
+    .navlinks a{text-decoration:none;font-size:13px;color:var(--muted)}
+    .navlinks a:hover{color:var(--cream)}
+    .btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;border:1px solid var(--wood);padding:13px 19px;text-decoration:none;font-weight:700;font-size:13px;letter-spacing:.02em;transition:.2s}
+    .btn.primary{background:var(--wood);color:#17130f}
+    .btn.primary:hover{background:#cba77f}
+    .btn.secondary:hover{background:rgba(181,139,97,.12)}
+    .hero{position:relative;overflow:hidden;min-height:610px;display:flex;align-items:center;border-bottom:1px solid var(--line);background:radial-gradient(ellipse at 78% 43%,rgba(181,139,97,.17),transparent 36%),linear-gradient(115deg,#11110f 10%,#1b1a16 100%)}
+    .hero:after{content:"BAE";position:absolute;right:-2vw;bottom:-.28em;font-size:clamp(180px,32vw,440px);font-weight:900;letter-spacing:-.08em;color:rgba(245,241,232,.025);pointer-events:none}
+    .hero-grid{display:grid;grid-template-columns:1.05fr .95fr;align-items:center;gap:48px;padding:78px 0;position:relative;z-index:1}
+    .eyebrow{font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:var(--wood);font-weight:700}
+    h1,h2,h3,p{margin-top:0}
+    h1{font-size:clamp(40px,6.2vw,76px);line-height:1.02;letter-spacing:-.045em;margin:17px 0 22px;max-width:650px}
+    h1 em{font-style:normal;color:var(--wood)}
+    .lead{font-size:17px;color:var(--muted);max-width:540px;margin-bottom:28px}
+    .actions{display:flex;flex-wrap:wrap;gap:12px}
+    .hero-visual{min-height:350px;position:relative;display:flex;align-items:center;justify-content:center}
+    .visual-frame{width:100%;aspect-ratio:4/3;border:1px solid rgba(181,139,97,.45);padding:12px;position:relative}
+    .visual-inner{height:100%;display:flex;flex-direction:column;justify-content:flex-end;padding:24px;background:linear-gradient(0deg,rgba(0,0,0,.82),rgba(0,0,0,.02)),linear-gradient(135deg,#6c5745,#24221e 52%,#a58a6b)}
+    .visual-inner .label{font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:#e0c4a2}
+    .visual-inner strong{font-size:25px;line-height:1.2;max-width:300px}
+    .visual-note{position:absolute;top:26px;right:-13px;background:var(--cream);color:#1b1915;padding:12px 16px;font-size:11px;font-weight:800;letter-spacing:.1em}
+    .section{padding:88px 0}
+    .section-head{display:flex;justify-content:space-between;align-items:end;gap:30px;margin-bottom:34px}
+    .section-head h2{font-size:clamp(30px,4vw,46px);line-height:1.08;letter-spacing:-.035em;margin:9px 0 0;max-width:600px}
+    .section-head p{max-width:410px;color:var(--muted);margin-bottom:0;font-size:14px}
+    .gallery{display:grid;grid-template-columns:1.15fr 1fr 1fr;gap:14px}
+    .photo-slot{min-height:300px;position:relative;overflow:hidden;background:linear-gradient(135deg,#39342d,#181816);border:1px solid var(--line)}
+    .photo-slot:first-child{min-height:390px}
+    .photo-slot .placeholder{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;flex-direction:column;text-align:center;padding:24px;background:radial-gradient(ellipse at 50% 40%,rgba(181,139,97,.25),transparent 55%),linear-gradient(145deg,#34302a,#171715)}
+    .photo-slot .placeholder .symbol{font-size:38px;color:var(--wood);margin-bottom:12px}
+    .photo-slot .placeholder strong{font-size:16px}
+    .photo-slot .placeholder span{font-size:12px;color:var(--muted);max-width:220px;margin-top:7px}
+    .photo-slot img{width:100%;height:100%;object-fit:cover;position:absolute;inset:0}
+    .photo-slot .caption{position:absolute;bottom:0;left:0;right:0;padding:18px;background:linear-gradient(0deg,rgba(0,0,0,.85),transparent);font-size:13px;font-weight:700}
+    .note{font-size:12px;color:var(--muted);margin-top:15px}
+    .services{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+    .service{padding:27px;border:1px solid var(--line);background:var(--panel);min-height:205px}
+    .service .num{font-size:12px;color:var(--wood);letter-spacing:.15em}
+    .service h3{font-size:21px;margin:20px 0 9px}
+    .service p{font-size:14px;color:var(--muted);margin:0}
+    .process{background:#e9e2d5;color:#1b1915}
+    .process .eyebrow{color:#8b623d}
+    .process .section-head p{color:#615b51}
+    .steps{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+    .step{border-top:1px solid rgba(27,25,21,.28);padding-top:18px}
+    .step .number{font-size:12px;color:#8b623d;font-weight:800;letter-spacing:.15em}
+    .step h3{font-size:19px;margin:12px 0 8px}
+    .step p{font-size:13px;color:#615b51;margin:0}
+    .faq-list{max-width:850px;margin:auto}
+    details{border-bottom:1px solid var(--line);padding:20px 0}
+    summary{cursor:pointer;list-style:none;font-weight:700;display:flex;justify-content:space-between;gap:20px}
+    summary::-webkit-details-marker{display:none}
+    summary:after{content:"+";color:var(--wood);font-size:22px;line-height:1}
+    details[open] summary:after{content:"−"}
+    details p{color:var(--muted);font-size:14px;padding:14px 32px 0 0;margin:0}
+    .cta{padding:70px 0;background:linear-gradient(110deg,#28231d,#151512);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+    .cta-inner{display:flex;align-items:center;justify-content:space-between;gap:30px}
+    .cta h2{font-size:clamp(30px,4vw,46px);line-height:1.1;margin:8px 0 12px;letter-spacing:-.035em}
+    .cta p{color:var(--muted);margin:0;max-width:570px}
+    footer{padding:28px 0;color:var(--muted);font-size:12px}
+    .footer-inner{display:flex;justify-content:space-between;align-items:center;gap:18px;flex-wrap:wrap}
+    .wa-float{position:fixed;right:18px;bottom:18px;z-index:30;background:#277a49;color:white;text-decoration:none;padding:14px 18px;font-weight:800;font-size:13px;box-shadow:0 8px 30px #0007}
+    @media(max-width:800px){.nav{min-height:64px}.navlinks{gap:12px}.navlinks a:not(.btn){display:none}.navlinks .btn{padding:10px 12px}.hero{min-height:auto}.hero-grid{grid-template-columns:1fr;gap:28px;padding:62px 0}.hero-visual{min-height:260px}.visual-frame{max-width:560px}.section{padding:65px 0}.section-head{display:block}.section-head p{margin-top:16px}.gallery{grid-template-columns:1fr 1fr}.photo-slot:first-child{grid-column:1/-1;min-height:320px}.photo-slot{min-height:230px}.services{grid-template-columns:1fr}.service{min-height:0}.steps{grid-template-columns:1fr 1fr;row-gap:28px}.cta-inner{display:block}.cta-inner .btn{margin-top:24px}}
+    @media(max-width:460px){.wrap{width:min(var(--max),calc(100% - 28px))}.brand{letter-spacing:.09em}.brand-mark{width:34px;height:34px}.brand small{font-size:9px}.navlinks .btn{font-size:11px;padding:9px}.hero-grid{padding:48px 0}.lead{font-size:15px}.actions .btn{width:100%}.gallery{grid-template-columns:1fr}.photo-slot:first-child{grid-column:auto;min-height:280px}.photo-slot{min-height:250px}.steps{grid-template-columns:1fr}.section{padding:55px 0}.wa-float{right:12px;bottom:12px;padding:12px 14px}}
   </style>
 </head>
 <body>
-<header>
-  <nav class="wrap">
-    <a class="logo" href="#inicio" aria-label="BAE inicio">B<span>A</span>E</a>
-    <div class="navlinks"><a href="#modelos">Modelos</a><a href="#proceso">Cómo trabajamos</a><a href="#contacto">Presupuesto</a></div>
-    <a class="btn secondary" href="#contacto">Consultar</a>
-  </nav>
-</header>
-<main>
-  <section class="hero" id="inicio">
-    <div class="wrap hero-inner">
-      <div class="eyebrow">Diseño · Fabricación · Instalación</div>
-      <h1>Tu cocina.<br><em>Tu estilo.</em><br>Hecha a medida.</h1>
-      <p>En BAE fabricamos mesadas de porcelanato líquido sobre MDF, con terminaciones modernas y diseños pensados para tu espacio.</p>
-      <div class="actions"><a class="btn primary" href="#contacto">Pedir presupuesto</a><a class="btn secondary" href="#modelos">Ver estilos</a></div>
+  <header class="topbar">
+    <div class="wrap nav">
+      <a class="brand" href="#inicio" aria-label="BAE Mesadas, inicio">
+        <span class="brand-mark">B</span><span>BAE<small>MESADAS</small></span>
+      </a>
+      <nav class="navlinks" aria-label="Navegación principal">
+        <a href="#trabajos">Trabajos</a><a href="#servicios">Servicios</a><a href="#proceso">Proceso</a>
+        <a class="btn secondary" href="#contacto">Consultar</a>
+      </nav>
     </div>
-  </section>
-  <section id="modelos">
-    <div class="wrap">
-      <div class="section-head"><div class="eyebrow">Diseños BAE</div><h2>Una mesada que combine con vos.</h2><p class="intro">Elegí un estilo como punto de partida. Cada proyecto se cotiza según las medidas, el diseño y los detalles que necesites.</p></div>
-      <div class="cards">
-        <article class="card"><div class="visual"></div><div class="card-body"><h3>Blanco moderno</h3><p>Una estética luminosa y limpia, ideal para cocinas contemporáneas.</p></div></article>
-        <article class="card"><div class="visual dark"></div><div class="card-body"><h3>Negro elegante</h3><p>Un acabado sobrio que contrasta con muebles claros y detalles de madera.</p></div></article>
-        <article class="card"><div class="visual wood"></div><div class="card-body"><h3>Detalles cálidos</h3><p>Combinaciones que aportan calidez y personalidad al ambiente.</p></div></article>
+  </header>
+
+  <main>
+    <section class="hero" id="inicio">
+      <div class="wrap hero-grid">
+        <div>
+          <div class="eyebrow">Diseño · Terminación · Detalle</div>
+          <h1>Una mesada que transforma <em>tu espacio.</em></h1>
+          <p class="lead">Mesadas y vanitorios con terminación de porcelanato líquido sobre MDF. Contanos tu idea y consultá por opciones, medidas e instalación.</p>
+          <div class="actions">
+            <a class="btn primary" href="https://wa.me/5491131643159?text=Hola%20BAE%20Mesadas%2C%20quiero%20consultar%20por%20una%20mesada." target="_blank" rel="noopener">Pedir presupuesto por WhatsApp ↗</a>
+            <a class="btn secondary" href="#trabajos">Ver galería</a>
+          </div>
+        </div>
+        <div class="hero-visual" aria-label="Espacio reservado para una foto de una mesada real">
+          <div class="visual-frame"><div class="visual-inner"><span class="label">BAE / Mesadas</span><strong>Diseño cuidado. Terminaciones protagonistas.</strong></div></div>
+          <div class="visual-note">TU PROYECTO · NUESTRA DEDICACIÓN</div>
+        </div>
       </div>
-      <p class="small">Imágenes ilustrativas de estilo: reemplazalas por fotos reales de trabajos de BAE para generar más confianza.</p>
-    </div>
-  </section>
-  <section class="band">
-    <div class="wrap band-grid">
-      <div><div class="eyebrow">A medida</div><h2>Se adapta a tu espacio, no al revés.</h2><p class="intro">Contanos qué necesitás y armamos un presupuesto según las dimensiones y terminaciones del proyecto.</p><a class="btn primary" href="#contacto">Cotizar mi mesada</a></div>
-      <ul class="checklist"><li>Fabricación según medidas acordadas</li><li>Opciones de color y terminación</li><li>Consulta por entrega e instalación</li><li>Atención directa por WhatsApp</li></ul>
-    </div>
-  </section>
-  <section id="proceso">
-    <div class="wrap">
-      <div class="section-head"><div class="eyebrow">Simple y directo</div><h2>¿Cómo empezamos?</h2><p class="intro">Tres pasos para convertir tu idea en un presupuesto claro.</p></div>
-      <div class="steps">
-        <div class="step"><div class="number">01</div><h3>Mandanos las medidas</h3><p class="intro">Largo, ancho y cualquier detalle importante del espacio.</p></div>
-        <div class="step"><div class="number">02</div><h3>Definimos el diseño</h3><p class="intro">Conversamos sobre color, terminación, bacha, zócalo y colocación.</p></div>
-        <div class="step"><div class="number">03</div><h3>Recibí tu presupuesto</h3><p class="intro">Te respondemos por WhatsApp para coordinar los siguientes pasos.</p></div>
+    </section>
+
+    <section class="section" id="trabajos">
+      <div class="wrap">
+        <div class="section-head">
+          <div><div class="eyebrow">Galería</div><h2>Trabajos que hablan por sí solos.</h2></div>
+          <p>Este espacio está preparado para tus fotos reales. Cuando las agregues, tus futuros clientes podrán ver tus diseños y terminaciones.</p>
+        </div>
+        <div class="gallery">
+          <article class="photo-slot"><div class="placeholder"><div class="symbol">＋</div><strong>Foto de una mesada</strong><span>Reemplazá este espacio por una foto de tu trabajo terminado.</span></div><div class="caption">Mesadas</div></article>
+          <article class="photo-slot"><div class="placeholder"><div class="symbol">＋</div><strong>Foto de un vanitorio</strong><span>Agregá una foto vertical o de detalle.</span></div><div class="caption">Vanitorios</div></article>
+          <article class="photo-slot"><div class="placeholder"><div class="symbol">＋</div><strong>Detalle de terminación</strong><span>Mostrá el brillo, los bordes y los detalles.</span></div><div class="caption">Detalles</div></article>
+        </div>
+        <p class="note">Galería de ejemplo: los recuadros son marcadores, no fotos de trabajos realizados. Se pueden reemplazar por tus imágenes cuando quieras.</p>
       </div>
+    </section>
+
+    <section class="section" id="servicios" style="background:#171714">
+      <div class="wrap">
+        <div class="section-head">
+          <div><div class="eyebrow">Qué hacemos</div><h2>Soluciones para tu proyecto.</h2></div>
+          <p>Consultanos con las medidas aproximadas y una foto del espacio para conversar sobre las posibilidades.</p>
+        </div>
+        <div class="services">
+          <article class="service"><span class="num">01 / COCINA</span><h3>Mesadas</h3><p>Mesadas con terminación de porcelanato líquido sobre MDF, pensadas para acompañar el diseño de tu cocina.</p></article>
+          <article class="service"><span class="num">02 / BAÑO</span><h3>Vanitorios</h3><p>Opciones para renovar el sector del baño con una superficie de estilo limpio y contemporáneo.</p></article>
+          <article class="service"><span class="num">03 / PROYECTO</span><h3>Consulta e instalación</h3><p>Contanos qué necesitás y consultá la disponibilidad de entrega e instalación para tu zona.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section process" id="proceso">
+      <div class="wrap">
+        <div class="section-head">
+          <div><div class="eyebrow">Cómo trabajamos</div><h2>De tu idea a la mesada.</h2></div>
+          <p>Una guía simple para iniciar la consulta. Los detalles del trabajo se coordinan según cada proyecto.</p>
+        </div>
+        <div class="steps">
+          <article class="step"><span class="number">PASO 01</span><h3>Nos contás tu idea</h3><p>Escribinos por WhatsApp y describí qué necesitás.</p></article>
+          <article class="step"><span class="number">PASO 02</span><h3>Compartís medidas</h3><p>Mandá las medidas aproximadas y, si podés, una foto del espacio.</p></article>
+          <article class="step"><span class="number">PASO 03</span><h3>Consultás presupuesto</h3><p>Revisamos los datos para conversar sobre el proyecto y su costo.</p></article>
+          <article class="step"><span class="number">PASO 04</span><h3>Coordinamos detalles</h3><p>Si avanzás, se conversan terminaciones, tiempos y condiciones del trabajo.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="preguntas">
+      <div class="wrap">
+        <div class="section-head">
+          <div><div class="eyebrow">Preguntas frecuentes</div><h2>Antes de consultar.</h2></div>
+          <p>¿Tenés otra pregunta? Escribinos y contanos qué estás buscando.</p>
+        </div>
+        <div class="faq-list">
+          <details><summary>¿Cómo pido un presupuesto?</summary><p>Usá el botón de WhatsApp y enviá el tipo de mesada o vanitorio, las medidas aproximadas y una foto del espacio si tenés.</p></details>
+          <details><summary>¿Qué información conviene enviar?</summary><p>El largo y ancho aproximados, el uso que tendrá la superficie, la localidad y cualquier referencia de diseño que te guste.</p></details>
+          <details><summary>¿Hacen entrega e instalación?</summary><p>Consultá por WhatsApp la disponibilidad y las condiciones para tu ubicación y proyecto.</p></details>
+          <details><summary>¿La superficie es resistente a rayones?</summary><p>Como cualquier terminación, el porcelanato líquido puede marcarse o desgastarse con el uso. Consultanos sobre cuidados y uso recomendado antes de decidir.</p></details>
+          <details><summary>¿Cómo veo trabajos reales?</summary><p>Estamos preparando la galería para incorporar fotos reales de trabajos de BAE. Podés pedir ejemplos disponibles directamente por WhatsApp.</p></details>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta" id="contacto">
+      <div class="wrap cta-inner">
+        <div><div class="eyebrow">Hablemos de tu proyecto</div><h2>¿Pensando en una nueva mesada?</h2><p>Mandanos tu consulta por WhatsApp. Si ya tenés medidas o una foto del espacio, podés adjuntarlas en el chat.</p></div>
+        <a class="btn primary" href="https://wa.me/5491131643159?text=Hola%20BAE%20Mesadas%2C%20quiero%20consultar%20por%20un%20presupuesto." target="_blank" rel="noopener">Consultar por WhatsApp ↗</a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap footer-inner">
+      <a class="brand" href="#inicio"><span class="brand-mark">B</span><span>BAE<small>MESADAS</small></span></a>
+      <span>Mesadas y vanitorios · Consultas por WhatsApp</span>
+      <span>© <span id="year"></span> BAE Mesadas</span>
     </div>
-  </section>
-  <section id="contacto">
-    <div class="wrap band-grid">
-      <div><div class="eyebrow">Hablemos de tu proyecto</div><h2>Pedí tu presupuesto.</h2><p class="intro">Completá los datos y se abrirá WhatsApp con un mensaje listo para enviar a BAE.</p><p class="small">Antes de publicar la web, configurá el número de WhatsApp en el código (ver instrucciones incluidas).</p></div>
-      <form class="contactbox" id="quoteForm">
-        <label for="nombre">Tu nombre</label><input id="nombre" name="nombre" placeholder="¿Cómo te llamás?" required>
-        <label for="localidad">Localidad</label><input id="localidad" name="localidad" placeholder="Ej.: Burzaco">
-        <label for="tipo">¿Qué necesitás?</label><select id="tipo" name="tipo"><option>Mesada de cocina</option><option>Vanitory para baño</option><option>Otra mesada a medida</option></select>
-        <label for="medidas">Medidas aproximadas y detalles</label><textarea id="medidas" name="medidas" placeholder="Ej.: 1,80 m x 0,62 m; con bacha..."></textarea>
-        <button class="btn primary" type="submit">Continuar por WhatsApp</button>
-        <p class="small">El mensaje se enviará únicamente cuando lo confirmes dentro de WhatsApp.</p>
-      </form>
-    </div>
-  </section>
-</main>
-<footer><div class="wrap">© <span id="year"></span> BAE · Mesadas de porcelanato líquido sobre MDF. <span style="float:right">Diseño moderno, atención directa.</span></div></footer>
-<a class="wa-float" href="#contacto" aria-label="Pedir presupuesto">WhatsApp ↗</a>
-<script>
-  // IMPORTANTE: reemplazá el número de ejemplo por el WhatsApp de BAE.
-  // Formato internacional sin +, espacios ni guiones. Argentina: 549 + código de área + número.
-  const WHATSAPP_NUMBER = "5491131643159";
-  document.getElementById("year").textContent = new Date().getFullYear();
-  document.getElementById("quoteForm").addEventListener("submit", function(e){
-    e.preventDefault();
-    const name = document.getElementById("nombre").value.trim();
-    const city = document.getElementById("localidad").value.trim() || "No indicada";
-    const type = document.getElementById("tipo").value;
-    const details = document.getElementById("medidas").value.trim() || "Todavía no tengo las medidas";
-    const message = `Hola BAE, quiero pedir un presupuesto.\nNombre: ${name}\nLocalidad: ${city}\nProyecto: ${type}\nMedidas y detalles: ${details}`;
-    if (WHATSAPP_NUMBER === "5491131643159") {
-      alert("La página está preparada, pero falta configurar el número real de WhatsApp de BAE en el código antes de usar el formulario.");
-      return;
-    }
-    window.open(`https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`, "_blank", "noopener");
-  });
-</script>
+  </footer>
+  <a class="wa-float" href="https://wa.me/5491131643159?text=Hola%20BAE%20Mesadas%2C%20quiero%20hacer%20una%20consulta." target="_blank" rel="noopener" aria-label="Consultar por WhatsApp">WhatsApp ↗</a>
+  <script>document.getElementById("year").textContent = new Date().getFullYear();</script>
 </body>
 </html>
